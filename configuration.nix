@@ -83,6 +83,7 @@
     isNormalUser = true;
     description = "dbna";
     extraGroups = [ "networkmanager" "wheel" ];
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKL8jx59MariUi0FkbjmIyYWvogYvKe7RPoY01l5Bh7B guts@berserker" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -110,7 +111,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -127,4 +128,3 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
-# dbna
